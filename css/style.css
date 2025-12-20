@@ -1,0 +1,193 @@
+/* ================= GLOBAL STYLES ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb;
+    color: #1f2933;
+    line-height: 1.6;
+}
+
+/* ================= REUSABLE CLASSES ================= */
+.section {
+    padding: 70px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #111827;
+}
+
+.section-text {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    font-size: 1.05rem;
+    color: #374151;
+}
+
+/* ================= HERO SECTION ================= */
+.hero-section {
+    background-color: #ffffff;
+    padding: 100px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #111827;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #4b5563;
+    margin: 15px 0 30px;
+}
+
+.hero-buttons .btn {
+    margin: 5px;
+    padding: 10px 22px;
+    font-weight: 500;
+}
+
+/* ================= CARDS ================= */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+    font-weight: 600;
+    color: #111827;
+}
+
+/* ================= LISTS ================= */
+ul {
+    padding-left: 18px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    color: #374151;
+}
+
+/* ================= SKILLS ================= */
+.bg-light {
+    background-color: #f3f4f6 !important;
+}
+
+/* ================= COMPETITIVE PROGRAMMING ================= */
+.btn-outline-primary {
+    border-radius: 20px;
+    padding: 8px 18px;
+}
+
+/* ================= CONTACT FORM ================= */
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #2563eb;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background-color: #ffffff;
+    padding: 25px 0;
+    border-top: 1px solid #e5e7eb;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+    }
+}
+
+/* ================= FRONTEND POLISH ================= */
+
+/* Better section spacing on small devices */
+@media (max-width: 576px) {
+    .section {
+        padding: 50px 15px;
+    }
+
+    .hero-section {
+        padding: 80px 15px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* Card consistency */
+.card {
+    height: 100%;
+}
+
+/* Competitive programming cards alignment */
+@media (min-width: 768px) {
+    .competitive-row .card {
+        min-height: 160px;
+    }
+}
+
+/* Buttons consistency */
+.btn {
+    border-radius: 8px;
+}
+
+/* Smooth section separation */
+.section:not(.hero-section) {
+    scroll-margin-top: 80px;
+}
+
+/* Subtle divider look */
+.bg-light {
+    background: linear-gradient(
+        180deg,
+        #f3f4f6 0%,
+        #f9fafb 100%
+    ) !important;
+}
