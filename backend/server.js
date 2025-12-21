@@ -4,18 +4,26 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Middleware
-app.use(cors({
-    origin: "https://ashokkaji-portfolio.netlify.app/"
-}));
+// CORS configuration (browser-safe)
+const corsOptions = {
+    origin: "https://ashokkaji-portfolio.netlify.app",
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type"],
+    optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
-// Health check route
+// Explicit preflight handling
+app.options("*", cors(corsOptions));
+
+// Health check
 app.get("/", (req, res) => {
     res.send("Backend is running");
 });
 
-// Contact form API
+// Contact API
 app.post("/contact", (req, res) => {
     const { name, email, message } = req.body;
 
@@ -26,10 +34,7 @@ app.post("/contact", (req, res) => {
         });
     }
 
-    console.log("New Contact Message:");
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Message:", message);
+    console.log("New Contact Message:", { name, email, message });
 
     return res.status(200).json({
         success: true,
