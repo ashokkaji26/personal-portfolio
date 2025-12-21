@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:3001";
+const API_BASE_URL = "https://portfolio-backend-hums.onrender.com/";
 
 const form = document.getElementById("contactForm");
 
