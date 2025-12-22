@@ -16,6 +16,7 @@ body {
     line-height: 1.75;
 }
 
+/* ================= VARIABLES ================= */
 :root {
     --primary-blue: #2563eb;
     --accent-blue: #3b82f6;
@@ -28,6 +29,109 @@ body {
     --border-soft: #e5e7eb;
 }
 
+/* ================= NAVBAR ================= */
+
+.custom-navbar {
+    background: rgba(236, 193, 212, 0.372); /* premium cool grey */
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.10);
+    padding: 10px 0;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.10);
+}
+
+/* Brand name */
+.custom-navbar .navbar-brand {
+    color: var(--deep-grey);
+    font-weight: 800;
+    font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+/* Normal nav links */
+.custom-navbar .nav-link {
+    font-weight: 600;
+    color: #1e293b;
+    transition: color 0.2s ease;
+}
+
+.custom-navbar .nav-link:hover {
+    color: var(--primary-blue);
+}
+
+/* Resume button */
+.nav-resume-btn {
+    background: linear-gradient(
+        90deg,
+        var(--primary-blue),
+        var(--accent-blue)
+    );
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-resume-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 22px rgba(37, 99, 235, 0.38);
+    color: #ffffff;
+}
+
+/* Mobile navbar toggler */
+.navbar-toggler {
+    border-color: rgba(15, 23, 42, 0.2);
+}
+
+.navbar-toggler-icon {
+    filter: invert(0);
+}
+
+/* Navbar spacing refinement */
+.navbar-nav {
+    gap: 12px;
+}
+/* ================= INTRO SECTION ================= */
+
+.intro-section {
+    padding: 90px 0 50px;
+    margin-top: 60px; /* for fixed navbar */
+}
+
+.intro-box {
+    max-width: 850px;
+    margin: auto;
+    background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #f1f5ff 100%
+    );
+    padding: 45px 50px;
+    border-radius: 26px;
+    border: 1px solid #dbeafe;
+    box-shadow: 0 18px 45px rgba(37, 99, 235, 0.12);
+}
+
+.intro-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--deep-grey);
+    margin-bottom: 8px;
+    font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+.intro-subtitle {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 16px;
+}
+
+.intro-text {
+    font-size: 1.02rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
 /* ================= REUSABLE CLASSES ================= */
 .section {
     padding: 55px 0;
@@ -74,82 +178,6 @@ body {
     box-shadow: 0 14px 40px rgba(37, 99, 235, 0.08);
 }
 
-/* ================= HERO SECTION ================= */
-
-.hero-section {
-    background: radial-gradient(
-        circle at top,
-        #dbeafe 0%,
-        #eef2ff 40%,
-        #f8fafc 75%
-    );
-    padding: 100px 0 85px;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-title {
-    font-size: 3.5rem;
-    font-weight: 800;
-    letter-spacing: -1px;
-    color: var(--deep-grey);
-    margin-bottom: 10px;
-    font-family: 'Poppins', 'Inter', sans-serif;
-}
-
-.hero-subtitle {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: var(--primary-blue);
-    margin-bottom: 8px;
-}
-
-.hero-tagline {
-    font-size: 1.05rem;
-    color: var(--text-muted);
-    max-width: 650px;
-    margin: 0 auto 35px;
-}
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 14px;
-}
-
-.hero-buttons .btn {
-    margin: 5px;
-    padding: 10px 22px;
-    font-weight: 500;
-}
-.hero-section .container {
-    max-width: 900px;
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.95),
-        rgba(248, 250, 252, 0.9)
-    );
-    border-radius: 28px;
-    padding: 50px 48px;
-    box-shadow: 
-        0 30px 80px rgba(37, 99, 235, 0.25),
-        inset 0 0 0 1px #dbeafe;
-}
-.hero-section::after {
-    content: "";
-    position: absolute;
-    bottom: -60px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 120px;
-    background: radial-gradient(
-        ellipse at center,
-        rgba(37, 99, 235, 0.25),
-        transparent 70%
-    );
-    filter: blur(40px);
-}
 
 /* ================= CARDS ================= */
 .card {
@@ -288,6 +316,13 @@ form {
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
+    .intro-title {
+        font-size: 2.2rem;
+    }
+
+    .intro-box {
+        padding: 32px 28px;
+    }
     .hero-title {
         font-size: 2.2rem;
     }
