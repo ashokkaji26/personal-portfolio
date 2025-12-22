@@ -32,11 +32,11 @@ body {
 /* ================= NAVBAR ================= */
 
 .custom-navbar {
-    background: rgba(236, 193, 212, 0.372); /* premium cool grey */
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(15, 23, 42, 0.10);
+    background: rgba(226, 232, 255, 0.75); /* premium bluish glass */
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(37, 99, 235, 0.12);
     padding: 10px 0;
-    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.10);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.12);
 }
 
 /* Brand name */
