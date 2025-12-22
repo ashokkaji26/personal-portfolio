@@ -190,6 +190,40 @@ body {
     color: #111827;
 }
 
+/* ================= EDUCATION + RESPONSIBILITY ================= */
+
+.dual-card {
+    background: #ffffff;
+    border: 1px solid #dbeafe;
+    border-radius: 18px;
+    padding: 26px 28px;
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.10);
+    height: 100%;
+}
+
+.dual-title {
+    font-weight: 700;
+    color: var(--deep-grey);
+    margin-bottom: 2px;
+}
+
+.dual-subtitle {
+    font-size: 0.95rem;
+    color: var(--primary-blue);
+    margin-bottom: 6px;
+}
+
+.dual-role {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.dual-card hr {
+    margin: 12px 0;
+    border-color: #e5e7eb;
+}
+
 /* ================= LISTS ================= */
 ul {
     padding-left: 18px;
