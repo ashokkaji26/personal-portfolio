@@ -1,6 +1,5 @@
 const API_BASE_URL = "https://portfolio-backend-hums.onrender.com";
 
-
 const form = document.getElementById("contactForm");
 
 if (form) {
@@ -19,8 +18,6 @@ if (form) {
 
         const submitBtn = form.querySelector("button[type='submit']");
         submitBtn.disabled = true;
-
-        
 
         try {
             const response = await fetch(`${API_BASE_URL}/contact`, {
@@ -43,7 +40,7 @@ if (form) {
             console.error("Error sending message:", error);
             alert("Unable to send message. Please try again later.");
         } finally {
-            submitBtn.disabled = true;
+            submitBtn.disabled = false;
         }
     });
 }
