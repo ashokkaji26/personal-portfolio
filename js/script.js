@@ -19,6 +19,8 @@ if (form) {
         const submitBtn = form.querySelector("button[type='submit']");
         submitBtn.disabled = true;
 
+        
+
         try {
             const response = await fetch(`${API_BASE_URL}/contact`, {
                 method: "POST",
