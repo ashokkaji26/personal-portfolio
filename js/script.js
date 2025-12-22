@@ -43,7 +43,7 @@ if (form) {
             console.error("Error sending message:", error);
             alert("Unable to send message. Please try again later.");
         } finally {
-            submitBtn.disabled = false;
+            submitBtn.disabled = true;
         }
     });
 }
