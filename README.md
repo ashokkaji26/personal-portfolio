@@ -8,7 +8,7 @@ This portfolio acts as a **central hub** for recruiters and interviewers to expl
 
 ## 🔗 Live Demo & Repository
 
-- 🌐 **Live Website:** https://ashokkaji-personal-portfolio.netlify.app/
+- 🌐 **Live Website:** https://ashokkaji26.github.io/personal-portfolio/
 - 📦 **GitHub Repository:** https://github.com/ashokkaji26/personal-portfolio.git
 
 ---
